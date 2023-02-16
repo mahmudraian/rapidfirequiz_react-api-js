@@ -1,0 +1,16 @@
+.main_home{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 20px 20px;
+    margin: 20px;
+}
+
+
+
+.topics-part{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    
+
+}
