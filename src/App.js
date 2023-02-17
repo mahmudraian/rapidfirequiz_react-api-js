@@ -4,6 +4,7 @@ import './App.css';
 import Blog from './Components/Header/Blog/Blog';
 
 import Home from './Components/Home/Home';
+import Question from './Components/Question/Question';
 import Statistics from './Components/Statistics/Statistics';
 import Main from './Layout/Main';
 
@@ -23,6 +24,12 @@ const router=createBrowserRouter([
     },
     {
       path:"statistics",element:<Statistics></Statistics>
+    },
+    {
+      path:"/home/:id",
+      loader: async({params})=>{
+        return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)}
+      ,element:<Question></Question>
     }
   ]}
 

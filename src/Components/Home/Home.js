@@ -1,12 +1,15 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import Topics from '../Topics/Topics';
 import './Home.css';
 
 const Home = () => {
     const quiz_topics= useLoaderData()
 
+    const navigate=useNavigate()
+
     const handlestartquiz=(id)=>{
+        navigate(`/home/${id}`)
         console.log(id)
     }
 
