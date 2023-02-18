@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useNavigate } from 'react-router-dom';
+import Homepara from '../Home-para/Homepara';
 import Topics from '../Topics/Topics';
 import './Home.css';
 
@@ -15,7 +16,19 @@ const Home = () => {
 
     console.log(quiz_topics.data);
     return (
-       <div className="main_home">
+      <div className='home'>
+        <div className="home_intro">
+        <div className='home-img'>
+            <img src='https://i.ibb.co/vx905gD/students-knowing-right-answer.jpg' alt=''></img>
+        </div>
+        <div className='paragraph'>
+            <h4>This is our online knowledge home!!!</h4>
+            <Homepara></Homepara>
+            <p></p>
+        </div>
+
+        </div>
+         <div className="main_home">
          <div className='topics-part'>
           
           {
@@ -28,9 +41,10 @@ const Home = () => {
           }
           
       </div>
-      <div className="cart-conteiner">
-        <h4>This is cart</h4>
-      </div>
+      {/* <div className="cart-conteiner">
+        <h4>This is cart(HOME)</h4>
+      </div> */}
+       </div>
        </div>
     );
 };

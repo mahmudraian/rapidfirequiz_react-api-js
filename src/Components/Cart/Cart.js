@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NumberContext } from '../Singlequistion/Singlequistion';
 
 const Cart = ({number}) => {
+
     return (
         <div>
-            <p>Number:{number}</p>
+            <p></p>
+            <p>This is cart</p>
+            <p> Number: {number}</p>
         </div>
     );
 };

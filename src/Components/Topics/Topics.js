@@ -8,8 +8,8 @@ const Topics = ({topics ,handlestartquiz}) => {
         <div>
            <div className="topics_content">
            <img src={logo} alt=''></img>
-            <h6>{name}</h6>
-            <button onClick={()=>handlestartquiz(id)}> Start quiz</button>
+            <h1>{name}</h1>
+            <button className='topic-btn' onClick={()=>handlestartquiz(id)}> Start quiz</button>
            </div>
         </div>
     );

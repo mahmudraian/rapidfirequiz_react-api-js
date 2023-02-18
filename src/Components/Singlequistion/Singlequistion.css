@@ -1,0 +1,23 @@
+.single-question{
+   background-color: rgb(218, 205, 196);
+    display: grid;
+    /* border: 1px solid gray; */
+    gap: 20px;
+    border-radius: 30px;
+}
+
+.question-details{
+    background-color: coral;
+    /* border: 10px solid darkblue; */
+    border-radius: 30px;
+    display:flex;
+    justify-content: space-around;
+    
+}
+.eye-btn{
+    background-color: coral;
+    border: none;
+}
+.eye-btn:hover{
+    color: aqua;
+}

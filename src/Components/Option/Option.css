@@ -1,0 +1,21 @@
+.options{
+    /* border: 1px solid saddlebrown; */
+    
+}
+
+.option-btn{
+    align-items: center;
+    height: 50px;
+    width: 800px;
+    background-color: deepskyblue;
+    font-size: medium;
+    font-style: oblique;
+    border: 1px none;
+    margin: 10px;
+    border-radius: 15px;
+}
+.option-btn:hover{
+    background-color: rgb(184, 174, 174);
+    color: aqua;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}

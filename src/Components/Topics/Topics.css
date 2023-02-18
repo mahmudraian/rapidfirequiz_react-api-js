@@ -1,8 +1,21 @@
 .topics_content{
     width: 200px;
     height: 300px;
-    /* border: 1px solid gray; */
+    border: 1px solid gray;
+    background-color:rgb(85, 85, 77);
+    border-radius: 30px;
 }
 .topics_content img{
-    width: 100%;
+    width: 60%;
+}
+.topic-btn{
+    background-color: rgb(43, 189, 226);
+    width: 50%;
+    height: 15%;
+    border: 1px none;
+    border-radius: 20px;
+}
+
+.topic-btn:hover{
+    background-color: red;
 }

@@ -1,0 +1,10 @@
+.question-part{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.main-question{
+    display: grid;
+    /* border: 1px solid gray; */
+    gap: 20px;
+}

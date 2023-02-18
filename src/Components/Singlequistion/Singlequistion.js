@@ -1,31 +1,66 @@
-import React, { useState } from 'react';
-import Cart from '../Cart/Cart';
+import React, { createContext, useContext, useState } from 'react';
 import Option from '../Option/Option';
+import './Singlequistion.css';
+import { AnsnumberContext } from '../Question/Question';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee, faEye } from '@fortawesome/free-solid-svg-icons';
 
 const Singlequistion = ({questions}) => {
     const{question,correctAnswer,options}=questions;
-    const[number,setNumber]=useState(0)
+    const[number,setNumber]=useState(1)
+    const [answer,setAnswer]=useContext(AnsnumberContext);
+    let number1=number;
     const handleoption=(option)=>{
       if(option===correctAnswer){
-       const total =number+1;
-       setNumber(total)
+
+        setNumber(number+1)
+        
+          alert("Awesome!You select right option!");
+        
+       
+       console.log(number)
       }  else{
-        console.log("hoynai!")
+        alert(" :( Please try again!");
       }
-    }
+      
+      setAnswer(number)
     
+    }
+    const handleshowcurrect=(correctAnswer)=>{
+    
+    alert(correctAnswer)
+    // alert(answershow)
+      
+    }
+    console.log(answer+number)
     return (
-        <div>
-            <h5>{question}</h5>
-            <p>{correctAnswer}</p>
+
+     
+        <div className='single-question'>
+           <div className="question-details">
+           <h5>{question}</h5>
+           <button className='eye-btn' onClick={()=>handleshowcurrect(correctAnswer)}>
+           <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
+           
+           </button>
+           </div>
+            {/* <p>{correctAnswer}</p> */}
+            <div className="option-part">
             {
                 options.map(option=> <Option
+                key={option}
                 option={option}
                 handleoption={handleoption}
+          
                 ></Option>)
+                
             }
-            <Cart number={number}></Cart>
+            
+            
+            </div>
+          
         </div>
+
     );
 };
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Header.css'
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div>
+        <div className='header-main'>
           <nav className='header'>
-          <Link to='home'>Home</Link>
+          <NavLink className={({isActive})=> isActive ? 'active' : undefined} to='home'>Home</NavLink>
           <Link to='blog'>Blog</Link>
           <Link to='statistics'>Statistics</Link>
           </nav>

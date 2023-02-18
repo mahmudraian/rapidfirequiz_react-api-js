@@ -1,9 +1,11 @@
 import React from 'react';
+import './Option.css';
 
 const Option = ({option ,handleoption}) => {
     return (
-        <div>
-           <button onClick={()=>handleoption(option)} >
+        <div className='options'>
+           <button className='option-btn' onClick={()=>handleoption(option)} >
+           
         {option}
         </button>
           
