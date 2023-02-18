@@ -11,7 +11,7 @@ const Home = () => {
 
     const handlestartquiz=(id)=>{
         navigate(`/home/${id}`)
-        console.log(id)
+    
     }
 
     console.log(quiz_topics.data);

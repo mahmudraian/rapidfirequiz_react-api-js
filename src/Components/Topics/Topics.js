@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import './Topics.css';
+export const TopicContext=createContext();
 
 const Topics = ({topics ,handlestartquiz}) => {
-    const {id,name,logo}=topics;
+    const {id,name,logo,total}=topics;
+
 
     return (
+        <TopicContext.Provider value={[name,total]}>
         <div>
            <div className="topics_content">
            <img src={logo} alt=''></img>
@@ -12,6 +15,7 @@ const Topics = ({topics ,handlestartquiz}) => {
             <button className='topic-btn' onClick={()=>handlestartquiz(id)}> Start quiz</button>
            </div>
         </div>
+        </TopicContext.Provider>
     );
 };
 

@@ -3,12 +3,14 @@ import Option from '../Option/Option';
 import './Singlequistion.css';
 import { AnsnumberContext } from '../Question/Question';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 const Singlequistion = ({questions}) => {
     const{question,correctAnswer,options}=questions;
     const[number,setNumber]=useState(1)
     const [answer,setAnswer]=useContext(AnsnumberContext);
+   
+  
     let number1=number;
     const handleoption=(option)=>{
       if(option===correctAnswer){
@@ -32,7 +34,7 @@ const Singlequistion = ({questions}) => {
     // alert(answershow)
       
     }
-    console.log(answer+number)
+   
     return (
 
      
@@ -40,6 +42,7 @@ const Singlequistion = ({questions}) => {
            <div className="question-details">
            <h5>{question}</h5>
            <button className='eye-btn' onClick={()=>handleshowcurrect(correctAnswer)}>
+        
            <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
            
            </button>

@@ -4,19 +4,24 @@ import Cart from '../Cart/Cart';
 import './Quistion.css';
 import Singlequistion, { NumberContext } from '../Singlequistion/Singlequistion';
  export const AnsnumberContext= createContext()
+ export const DataContext=createContext();
+
 const Question = () => {
     const [answer,setAnswer]=useState()
     const quiz_q=useLoaderData()
     console.log(quiz_q)
     const  {name,id,questions}= quiz_q.data;
     
-    
+    const data=questions.length;
+    console.log(data);
     
 
     return (
+        
         <AnsnumberContext.Provider value={[answer,setAnswer]}>
         <div  className="main_home">
         <h3>Quiz OF {name}</h3>
+    
             <div className='question-part'>
             
           <div className='main-question' >
@@ -33,6 +38,7 @@ const Question = () => {
         </div>
         </div>
         </AnsnumberContext.Provider>
+        
     );
 };
 
